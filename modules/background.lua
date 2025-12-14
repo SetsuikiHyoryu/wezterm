@@ -13,8 +13,8 @@ function module.apply_to_config(config)
 
     -- 纯色不加高宽会不生效。
     {
-      source = { Color = '#0c0c11' },
-      opacity = 0.77,
+      source = { Color = '#100f12' },
+      opacity = 0.81,
       height = '100%',
       width = '100%',
     },
