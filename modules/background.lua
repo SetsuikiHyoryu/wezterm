@@ -1,6 +1,10 @@
 local module = {}
 
-function module.apply_to_config(config)
+local function use_simple_background(config)
+  config.window_background_opacity = 0.81
+end
+
+local function use_complex_background(config)
   config.background = {
     {
       source = {
@@ -19,6 +23,19 @@ function module.apply_to_config(config)
       width = '100%',
     },
   }
+end
+
+local function set_background(config, use_simple)
+  if use_simple then
+    use_simple_background(config)
+  else
+    use_complex_background(config)
+  end
+end
+
+function module.apply_to_config(config)
+  set_background(config, false)
+  config.text_background_opacity = 0.81 -- 影响 Tab 等图案，不影响文字。
 end
 
 return module
