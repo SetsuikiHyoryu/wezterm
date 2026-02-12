@@ -39,7 +39,7 @@ wezterm.log_error()
 
 - 水平分割：`CTRL + ALT + SHIFT + "`
 - 垂直分割：`CTRL + ALT + SHIFT + %`
-- 切换 Pane：`CTRL + SHIFT + arrow`
+- 切换 Pane：`SUPER + SHIFT + H/J/K/L`
 - 调整 Pane 大小：`CTRL + ALT + SHIFT + arrow`
 - 最大化 Pane（隐藏其他 Pane）：`CTRL + SHIFT + z`
 
