@@ -5,9 +5,10 @@ local config = wezterm.config_builder()
 config.default_prog = { '/opt/homebrew/bin/nu' }
 
 -- Modules
-require('modules.colorscheme').apply_to_config(config)
-require('modules.background').apply_to_config(config)
 require('modules.appearance').apply_to_config(config)
+require('modules.background').apply_to_config(config)
+require('modules.bell').apply_to_config(config)
+require('modules.colorscheme').apply_to_config(config)
 require('modules.font').apply_to_config(config)
 require('modules.keymap').apply_to_config(config)
 
