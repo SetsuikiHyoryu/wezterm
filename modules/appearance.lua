@@ -27,10 +27,15 @@ local function set_window_padding(config)
   }
 end
 
+local function set_cursor_style(config)
+  config.cursor_blink_rate = 0
+end
+
 function module.apply_to_config(config)
   set_window_decorations(config)
   set_tab_bar(config)
   set_window_padding(config)
+  set_cursor_style(config)
 end
 
 return module
