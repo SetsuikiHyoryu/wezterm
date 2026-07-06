@@ -14,6 +14,9 @@ function module.apply_to_config(config)
     { key = 'J', mods = 'SHIFT|SUPER', action = act.ActivatePaneDirection 'Down' },
     { key = 'J', mods = 'SHIFT|ALT|SUPER', action = act.AdjustPaneSize { 'Down', 1 } },
 
+    -- Change `ctrl + [` action to `esc` to support some commandline tools.
+    { key = '[', mods = 'CTRL', action = act.SendKey { key = 'Escape' } },
+
     -- Tab Name
     -- See: https://github.com/wezterm/wezterm/issues/522#issuecomment-1496894508
     --
