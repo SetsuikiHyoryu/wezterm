@@ -4,6 +4,9 @@ local act = wezterm.action
 
 function module.apply_to_config(config)
   config.keys = {
+    -- Change `ctrl + [` action to `esc` to support some commandline tools.
+    { key = '[', mods = 'CTRL', action = act.SendKey { key = 'Escape' } },
+
     -- Pane Cotrol
     { key = 'H', mods = 'SHIFT|SUPER', action = act.ActivatePaneDirection 'Left' },
     { key = 'H', mods = 'SHIFT|ALT|SUPER', action = act.AdjustPaneSize { 'Left', 1 } },
@@ -14,8 +17,9 @@ function module.apply_to_config(config)
     { key = 'J', mods = 'SHIFT|SUPER', action = act.ActivatePaneDirection 'Down' },
     { key = 'J', mods = 'SHIFT|ALT|SUPER', action = act.AdjustPaneSize { 'Down', 1 } },
 
-    -- Change `ctrl + [` action to `esc` to support some commandline tools.
-    { key = '[', mods = 'CTRL', action = act.SendKey { key = 'Escape' } },
+    -- Tab Move
+    { key = '{', mods = 'SHIFT|ALT', action = act.MoveTabRelative(-1) },
+    { key = '}', mods = 'SHIFT|ALT', action = act.MoveTabRelative(1) },
 
     -- Tab Name
     -- See: https://github.com/wezterm/wezterm/issues/522#issuecomment-1496894508
