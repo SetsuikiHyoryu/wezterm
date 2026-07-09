@@ -24,8 +24,8 @@ function module.apply_to_config(config)
     -- `:!wezterm cli set-tab-title [OPTIONS] <title>`
     -- See: https://wezterm.org/cli/cli/set-tab-title.html
     {
-      key = 'E',
-      mods = 'CTRL|SHIFT',
+      key = '@',
+      mods = 'SUPER|SHIFT',
       action = act.PromptInputLine {
         description = 'Enter new name for tab',
         action = wezterm.action_callback(function(window, pane, line)
