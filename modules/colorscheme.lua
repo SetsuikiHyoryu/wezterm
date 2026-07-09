@@ -5,8 +5,8 @@ local function create_tab_bar_colors()
     background = '#fa85ba',
 
     active_tab = {
-      bg_color = '#ffa6c9',
-      fg_color = '#333333',
+      bg_color = '#E878B0',
+      fg_color = '#233333',
     },
 
     inactive_tab = {
